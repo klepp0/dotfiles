@@ -1,5 +1,6 @@
 install:
 	@echo "Installing dotfiles ..."
+	@git submodule update --merge --remote
 	@chmod +x ./install.sh
 	@./install.sh
 	@echo "Done."
