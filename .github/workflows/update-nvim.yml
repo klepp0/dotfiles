@@ -1,8 +1,8 @@
-name: Repository Dispatch
+name: Update Neovim Submodule
 
 on:
   repository_dispatch:
-    types: [my-event]
+    types: [update-nvim]
 
 jobs:
   myEvent:
