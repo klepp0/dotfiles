@@ -15,7 +15,7 @@ jobs:
 
       - name: Update Submodule
         run: |
-          git submodule update --remote --merge
+          git submodule update --remote --force
 
       - name: Commit Submodule Update
         run: |
