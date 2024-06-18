@@ -1,5 +1,11 @@
 # My Dotfiles
 
+<div align="center">
+
+![Dispatch](https://github.com/klepp0/dotfiles/actions/workflows/update-nvim.yml/badge.svg)
+
+</div>
+
 Welcome to my dotfiles repository! Here you'll find all the magical configuration files that make my development environment sparkle. Feel free to explore, use, and laugh at my setup, but remember: with great power comes great responsibility.
 
 > [!WARNING]
