@@ -1,5 +1,7 @@
 # My Dotfiles
 
+![dotfiles](./media/dotfiles.png)
+
 <div align="center">
 
 ![Dispatch](https://github.com/klepp0/dotfiles/actions/workflows/update-nvim.yml/badge.svg)
