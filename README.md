@@ -25,10 +25,17 @@ make install
 
 The script will back up your existing dotfiles by renaming them with a `.bak` extension before creating symlinks to the new dotfiles.
 
+### Requirements
+
+- [AeroSpace](https://github.com/nikitabobko/AeroSpace)
+- [neovim](https://github.com/neovim/neovim)
+- [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/)
+
 ### Included Dotfiles
 
-- `.zshrc`: Zsh configuration – because Zsh is the new Bash.
-- `.config/nvim/`: Neovim configuration – checkout my [nvim](https://github.com/klepp0/nvim) repo for more.
+- `.zshrc`: Because Zsh is the new Bash.
+- `.config/aerospace/`: The best tiling window manager for MacOS.
+- `.config/nvim/`: Checkout my [nvim](https://github.com/klepp0/nvim) repo for more.
 
 ## Uninstallation
 
