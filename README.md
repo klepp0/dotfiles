@@ -19,7 +19,7 @@ Welcome to my dotfiles repository! Here you'll find all the magical configuratio
 To set up your environment using these dotfiles, clone the repository and run the `install.sh` script:
 
 ```shell
-git clone https://github.com/klepp0/dotfiles.git
+git clone --recursive https://github.com/klepp0/dotfiles.git
 make install
 ```
 
