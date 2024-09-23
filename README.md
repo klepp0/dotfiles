@@ -19,7 +19,7 @@ Welcome to my dotfiles repository! Here you'll find all the magical configuratio
 To set up your environment using these dotfiles, clone the repository and run the `install.sh` script:
 
 ```shell
-git clone https://github.com/klepp0/dotfiles.git
+git clone --recursive https://github.com/klepp0/dotfiles.git
 make install
 ```
 
@@ -30,12 +30,15 @@ The script will back up your existing dotfiles by renaming them with a `.bak` ex
 - [AeroSpace](https://github.com/nikitabobko/AeroSpace)
 - [neovim](https://github.com/neovim/neovim)
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/)
+- [tmux](https://github.com/tmux/tmux)
 
 ### Included Dotfiles
 
 - `.zshrc`: Because Zsh is the new Bash.
+- `.config/custom-zshrc`: To keep your actual shell configs organised.
 - `.config/aerospace/`: The best tiling window manager for MacOS.
 - `.config/nvim/`: Checkout my [nvim](https://github.com/klepp0/nvim) repo for more.
+- `.config/tmux/`: If you are using nvim without [tmux](https://github.com/tmux/tmux) you are probably doing something wrong.
 
 ## Uninstallation
 
