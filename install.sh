@@ -60,4 +60,7 @@ for dir in $(find .config -mindepth 1 -maxdepth 1 -type d); do
     fi
 done
 
+# Update shell
+source ~/.zshrc
+
 echo "Dotfiles have been installed successfully."
