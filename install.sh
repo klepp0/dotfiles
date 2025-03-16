@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Dotfiles directory
 DOTFILES_DIR=$(pwd)
