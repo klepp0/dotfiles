@@ -1,4 +1,4 @@
-# My Dotfiles
+# dotfiles
 
 ![dotfiles](./media/dotfiles.png)
 
