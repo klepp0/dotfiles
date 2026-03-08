@@ -10,10 +10,26 @@ set -euo pipefail
 
 # --- CONFIGURATION ---
 # List your session names here (order must match DIRECTORIES).
-SESSIONS=("dev" "nvim" "dotfiles" "llm-service" "process-crafter" "process-evaluator" "x2p")
+SESSIONS=(
+  "dev"
+  "nvim"
+  "dotfiles"
+  "bruno"
+  "llm-service"
+  "x2p-service"
+  "x2p-discovery"
+)
 
 # Matching start directories for each session (use ~ for your home).
-DIRECTORIES=("~/dev" "~/dev/nvim" "~/dev/dotfiles" "~/dev/llm-service" "~/dev/process-crafter" "~/dev/process-evaluator" "~/dev/x2p-discovery")
+DIRECTORIES=(
+  "~/dev"
+  "~/dev/nvim"
+  "~/dev/dotfiles"
+  "~/dev/bruno"
+  "~/dev/llm-service"
+  "~/dev/x2p-service"
+  "~/dev/x2p-discovery"
+)
 
 # --- SAFETY CHECKS ---
 
