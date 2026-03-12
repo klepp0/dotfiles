@@ -9,6 +9,10 @@ FILES=".zshrc"
 # List of directories to symlink in the home directory
 DIRS=".opencode"
 
+# List of individual files to symlink into existing directories
+# (for cases where we can't replace the entire directory)
+CONFIG_FILES=".config/opencode/AGENTS.md"
+
 # Function to create a backup of existing files
 backup_file() {
     local file=$1
@@ -62,14 +66,34 @@ for dir in $DIRS; do
     fi
 done
 
+# Directories under .config that are managed via CONFIG_FILES (individual file symlinks)
+# and should NOT be symlinked as whole directories
+CONFIG_FILE_DIRS=$(for f in $CONFIG_FILES; do dirname $f; done | sort -u)
+
 # Create symlinks for the .config directory
 for dir in $(find .config -mindepth 1 -maxdepth 1 -type d); do
+    # Skip directories managed via individual file symlinks
+    if echo "$CONFIG_FILE_DIRS" | grep -qx "$dir"; then
+        continue
+    fi
     base_dir=$(basename $dir)
     if prompt_user $base_dir "directory"; then
         backup_dir .config/$base_dir
         ln -sf $DOTFILES_DIR/.config/$base_dir ~/.config/$base_dir
     else
         echo "Skipping .config/$base_dir"
+    fi
+done
+
+# Create symlinks for individual config files into existing directories
+for config_file in $CONFIG_FILES; do
+    if prompt_user $config_file "config file"; then
+        target_dir=$(dirname ~/$config_file)
+        mkdir -p $target_dir
+        backup_file $config_file
+        ln -sf $DOTFILES_DIR/$config_file ~/$config_file
+    else
+        echo "Skipping $config_file"
     fi
 done
 
