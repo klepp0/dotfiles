@@ -23,5 +23,8 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# editor
+export EDITOR=nvim
+
 # k8s
 export KUBECONFIG=~/kubeconfig.yaml

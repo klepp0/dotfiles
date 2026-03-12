@@ -6,6 +6,9 @@ DOTFILES_DIR=$(pwd)
 # List of files/folders to symlink in the home directory
 FILES=".zshrc"
 
+# List of directories to symlink in the home directory
+DIRS=".opencode"
+
 # Function to create a backup of existing files
 backup_file() {
     local file=$1
@@ -46,6 +49,16 @@ for file in $FILES; do
         ln -sf $DOTFILES_DIR/$file ~/$file
     else
         echo "Skipping $file"
+    fi
+done
+
+# Create symlinks for directories in the home directory
+for dir in $DIRS; do
+    if prompt_user $dir "directory"; then
+        backup_dir $dir
+        ln -sf $DOTFILES_DIR/$dir ~/$dir
+    else
+        echo "Skipping $dir"
     fi
 done
 
