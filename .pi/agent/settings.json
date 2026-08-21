@@ -1,0 +1,23 @@
+{
+  "lastChangelogVersion": "0.83.0",
+  "theme": "dark",
+  "defaultThinkingLevel": "high",
+  "defaultProvider": "hai-gemini",
+  "defaultModel": "gemini-3.5-flash",
+  "skills": [
+    "~/dev/skills/skills/common",
+    "~/.claude/skills",
+    "~/.codex/skills"
+  ],
+  "packages": [
+    "npm:pi-btw",
+    "npm:@plannotator/pi-extension",
+    "npm:pi-subagents",
+    "npm:@trevonistrevon/pi-loop",
+    "npm:context-mode",
+    "npm:@vigolium/piolium",
+    "npm:pi-observability",
+    "../../dev/pi-session-label",
+    "npm:@d3ara1n/pi-model-roles"
+  ]
+}

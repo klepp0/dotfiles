@@ -1,5 +1,19 @@
 **/secrets.sh
 
+# pi coding agent — write path is symlinked from ~/.pi
+# Ignore everything in .pi except settings, models, agents rule docs, custom skills, and custom extensions
+.pi/**
+!.pi/settings.json
+!.pi/agent/
+.pi/agent/**
+!.pi/agent/settings.json
+!.pi/agent/models.json
+!.pi/agent/AGENTS.md
+!.pi/agent/extensions/
+!.pi/agent/extensions/**
+!.pi/agent/skills/
+!.pi/agent/skills/**
+
 # Created by https://www.toptal.com/developers/gitignore/api/macos,windows,linux
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,linux
 
