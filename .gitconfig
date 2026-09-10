@@ -1,0 +1,18 @@
+[user]
+	email = jonas.kleppich@sap.com
+	name = klepp0
+[credential]
+	helper = osxkeychain
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://github.tools.sap"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[core]
+	# Use a no-op editor so headless tools (pi, CI) never hang waiting for a TTY.
+	# Override per-invocation with GIT_EDITOR=nvim when interactive editing is needed.
+	editor = true

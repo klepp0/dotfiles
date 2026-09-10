@@ -14,6 +14,7 @@ import (
 var dotfilesDir string
 var files = []string{
 	".zshrc",
+	".gitconfig",
 }
 
 // Prompt the user for confirmation

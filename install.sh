@@ -4,14 +4,14 @@
 DOTFILES_DIR=$(pwd)
 
 # List of files/folders to symlink in the home directory
-FILES=".zshrc"
+FILES=".zshrc .gitconfig"
 
 # List of directories to symlink in the home directory
-DIRS=".opencode"
+DIRS=".pi"
 
 # List of individual files to symlink into existing directories
 # (for cases where we can't replace the entire directory)
-CONFIG_FILES=".config/opencode/AGENTS.md"
+CONFIG_FILES=".config/opencode/AGENTS.md .config/opencode/opencode.json"
 
 # Function to create a backup of existing files
 backup_file() {
